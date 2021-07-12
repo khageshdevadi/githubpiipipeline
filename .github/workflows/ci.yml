@@ -24,5 +24,5 @@ jobs:
     - run: ls
     - name: Run build
       run: |
-        chmod +x /home/ubuntu/html-docs-hello-world/script.sh
+        chmod +x ./html-docs-hello-world/script.sh
         ./script.sh -t
