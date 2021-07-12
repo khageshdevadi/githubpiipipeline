@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app:
+    container_name: sample-app
+    image: sample-image
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    networks:
+      - sample-net
+    ports:
+      - "4100:4100"
+    restart: always
+    volumes:
+      - type: volume
+        source: sample_app_home
+        target: /var/www/html
+
+networks:
+  sample-net:
+
+volumes:
+  sample_app_home:
