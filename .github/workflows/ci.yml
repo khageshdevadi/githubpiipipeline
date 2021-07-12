@@ -6,6 +6,9 @@ jobs:
   deploy:
     name: Push to EC2 Instance
     runs-on: ubuntu-latest
+  defaults:
+      run:
+        working-directory: /home/ubuntu
 
     steps:
     - name: Checkout the code
