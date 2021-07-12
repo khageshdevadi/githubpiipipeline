@@ -24,5 +24,5 @@ jobs:
     - run: ls
     - name: Run build
       run: |
-        chmod +x script.sh
-        sh script.sh -t
+        sudo chmod +x script.sh
+        sudo sh script.sh -t
