@@ -25,4 +25,4 @@ jobs:
     - name: Run build
       run: |
         sudo chmod +x ./script.sh
-        sh /home/ubuntu/script.sh -t
+        sh /home/ubuntu/html-docs-hello-world/script.sh -t
