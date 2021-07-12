@@ -20,6 +20,7 @@ jobs:
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/html-docs-hello-world/"
     - run: pwd
+    - run: ls
     - run: chmod +x script.sh
     - run: ./script.sh -t
     - run: ./script.sh -p
