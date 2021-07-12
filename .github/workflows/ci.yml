@@ -22,6 +22,7 @@ jobs:
         TARGET: "/home/ubuntu/html-docs-hello-world/"
     - run: pwd
     - run: ls
-    - run: sudo chmod 777 script.sh
-    - run: sudo sh script.sh -t
-    - run: sudo sh script.sh -p
+    - name: Run build
+      run: |
+        chmod +x ./script.sh
+        ./script.sh
