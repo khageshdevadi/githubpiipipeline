@@ -22,5 +22,5 @@ jobs:
     - run: pwd
     - run: ls
     - run: chmod +x script.sh
-    - run: ./script.sh -t
-    - run: ./script.sh -p
+    - run: sh script.sh -t
+    - run: sh script.sh -p
