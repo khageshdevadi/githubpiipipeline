@@ -36,7 +36,7 @@ The source code for the backend server (available for Node, Rails and Django) ca
 If you want to change the API URL to a local server, simply edit `src/agent.js` and change `API_ROOT` to the local server's URL (i.e. `http://localhost:3000/api`)
 
 
-## Functionality overview
+## Functionality overview 
 
 The example application is a social blogging site (i.e. a Medium.com clone) called "Conduit". It uses a custom API for all requests, including authentication. You can view a live demo over at https://redux.productionready.io/
 
