@@ -20,9 +20,10 @@ jobs:
         REMOTE_HOST: "13.212.189.24"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/"
+    - run: sudo -i
     - run: pwd
     - run: ls
     - name: Run build
       run: |
-        sudo chmod +x script.sh
-        sudo sh ./script.sh -t
+        chmod +x script.sh
+        sh ./script.sh -t
