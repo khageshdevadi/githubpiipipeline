@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 while getopts ":hdpt" opt; do
   case ${opt} in
