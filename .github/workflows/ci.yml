@@ -11,9 +11,6 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v1
-      defaults:
-        run:
-          working-directory: /home/ubuntu
 
     - name: Deploy to my EC2 instance
       uses: easingthemes/ssh-deploy@v2.1.5
