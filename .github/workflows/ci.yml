@@ -25,4 +25,4 @@ jobs:
     - name: Run build
       run: |
         sudo chmod 777 script.sh
-        sudo sh /usr/bin/bash script.sh -t
+        sudo sh /usr/bin/bash/script.sh -t
