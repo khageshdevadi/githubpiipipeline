@@ -25,19 +25,17 @@ jobs:
     - run: ls -l script.sh
     - run: sudo chmod +x script.sh
     - run: ls -l script.sh
-    - run: echo $HOME
-    - run: pwd
     - name: Test
       run: |
-          sudo cat <<EOF > $HOME/script.sh
+          sudo cat <<EOF > ./script.sh
           #!/bin/sh
           exit 1
           EOF
-          sudo chmod +x $HOME/script.sh
+          sudo chmod +x ./script.sh
           
           
           #!/bin/bash
-          sh $HOME/script.sh -p
+          sh ./script.sh -p
           if [ $? -ne 0 ]; then
               echo PASS
           fi;
