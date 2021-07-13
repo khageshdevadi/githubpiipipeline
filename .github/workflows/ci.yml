@@ -22,4 +22,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
     - run: |
-        sudo docker-compose up -d
+        sudo chmod +x ./sample.sh
+        sudo sh ./sample.sh
