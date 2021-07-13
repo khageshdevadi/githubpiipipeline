@@ -23,6 +23,6 @@ jobs:
     - run: ls
     - name: Run build
       run: |
-        sudo chmod +x docker.sh
-        sudo docker.sh 
+        sudo chmod +x ./docker.sh
+        sudo ./docker.sh 
         
