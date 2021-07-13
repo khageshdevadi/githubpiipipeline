@@ -29,5 +29,5 @@ jobs:
     - name: Run build
       run: |
         sudo chmod +x ./script.sh
-        sudo sh ./script.sh -p
+        sudo sh ./script.sh -p 
 
