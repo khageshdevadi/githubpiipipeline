@@ -19,7 +19,7 @@ jobs:
         SOURCE: "./"
         REMOTE_HOST: "18.138.249.41"
         REMOTE_USER: "root"
-        TARGET: "/home/ubuntu/"
+        TARGET: "/root"
     - run: pwd
     - run: ls
     #- run: ls -l script.sh
