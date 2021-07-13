@@ -22,7 +22,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
     - run: |
-        sudo docker stop sample-app
-        sudo docker rm sample-app
-        sudo docker rmi sample-image
         sudo docker-compose up --build
