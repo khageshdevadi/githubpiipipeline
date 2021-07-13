@@ -25,7 +25,19 @@ jobs:
     - run: ls -l script.sh
     - run: sudo chmod +x script.sh
     - run: ls -l script.sh
-    - name: Cleaning Up
+    - name: Test
       run: |
-       sh script.sh -p
-    #- run: sudo chmod +x ./script.sh ; sudo sh ./script.sh -p  
+          cat <<EOF > $HOME/script.sh
+          #!/bin/sh
+          exit 1
+          EOF
+          chmod +x $HOME/script.sh
+          
+          
+          #!/bin/bash
+          $HOME/script.sh -p
+          if [ $? -ne 0 ]; then
+              echo PASS
+          fi;
+          EOF
+          echo END
