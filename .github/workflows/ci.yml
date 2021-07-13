@@ -14,12 +14,12 @@ jobs:
 
     - name: Deploy to my EC2 instance
       uses: easingthemes/ssh-deploy@v2.1.5
-      env:
+      with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "./"
-        REMOTE_HOST: "18.138.249.41"
-        REMOTE_USER: "ubuntu"
-        TARGET: "/home/ubuntu"
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
     - run: pwd
     - run: ls
     #- run: ls -l script.sh
