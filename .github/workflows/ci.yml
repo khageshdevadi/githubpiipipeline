@@ -22,20 +22,21 @@ jobs:
         TARGET: "/home/ubuntu/"
     - run: pwd
     - run: ls
-    - run: ls -l script.sh
-    - run: sudo chmod +x script.sh
-    - run: ls -l script.sh
-    - name: Test
-      run: |
-          #!/bin/sh
-          exit 1
-          EOF
-          sudo chmod +x ./script.sh
+    #- run: ls -l script.sh
+    - run: sudo chmod +x sample.sh
+    - run: ls -l sample.sh
+    - run: sh sample.sh
+#     - name: Test
+#       run: |
+#           #!/bin/sh
+#           exit 1
+#           EOF
+#           sudo chmod +x ./script.sh
           
-          #!/bin/bash
-          sh ./script.sh -p
-          if [ $? -ne 0 ]; then
-              echo PASS
-          fi;
-          EOF
-          echo END
+#           #!/bin/bash
+#           sh ./script.sh -p
+#           if [ $? -ne 0 ]; then
+#               echo PASS
+#           fi;
+#           EOF
+#           echo END
