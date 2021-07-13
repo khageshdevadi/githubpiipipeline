@@ -11,17 +11,18 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v1
-
     - name: Deploy to my EC2 instance
-      if: github.ref == 'refs/heads/master'
-      uses: appleboy/ssh-action@master
-      with:
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-    - run: |
-        sudo chmod +x ./sample.sh
-        sudo sh ./sample.sh
+        SOURCE: "./"
+        REMOTE_HOST: "18.138.249.41"
+        REMOTE_USER: "ubuntu"
+        TARGET: "/home/ubuntu/"
+    - run: pwd
+    - run: ls
+    - name: Run build
+      run: |
+        sudo chmod +x sample.sh
+        sudo ./sample.sh 
         
