@@ -71,9 +71,9 @@ while getopts ":hdpt" opt; do
       ;;
   esac
 done
-shift $((OPTIND -1))
+#shift $((OPTIND -1))
 
-printf "USAGE: ./spinup.sh [OPTION]... \n\n"
-printf "-h for HELP, -d for DEV, -p for PROD, or -t for TEARDOWN \n\n"
+#printf "USAGE: ./spinup.sh [OPTION]... \n\n"
+#printf "-h for HELP, -d for DEV, -p for PROD, or -t for TEARDOWN \n\n"
 #exit 1
-;;
+#;;
