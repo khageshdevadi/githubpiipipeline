@@ -22,10 +22,10 @@ jobs:
         TARGET: "/home/ubuntu/"
     - run: pwd
     - run: ls
-    - run: ls -l ./script.sh
-    - run: sudo chmod +x ./script.sh
-    - run: ls -l ./script.sh
+    - run: ls -l script.sh
+    - run: sudo chmod +x script.sh
+    - run: ls -l script.sh
     - name: Cleaning Up
       run: |
-       sh ./script.sh -p
+       sh script.sh -p
     #- run: sudo chmod +x ./script.sh ; sudo sh ./script.sh -p  
