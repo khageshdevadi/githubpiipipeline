@@ -17,12 +17,12 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "./"
-        REMOTE_HOST: "13.212.189.24"
+        REMOTE_HOST: "18.138.249.41"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/"
     - run: pwd
     - run: ls
     - name: Run build
       run: |
-        sudo chmod +x script.sh
+        sudo chmod +x ./script.sh
         sudo sh ./script.sh -p
