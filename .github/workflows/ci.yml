@@ -18,8 +18,8 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "./"
         REMOTE_HOST: "18.138.249.41"
-        REMOTE_USER: "khagesh"
-        TARGET: "/home/khagesh/"
+        REMOTE_USER: "root"
+        TARGET: "/home/ubuntu/"
     - run: pwd
     - run: ls
     #- run: ls -l script.sh
