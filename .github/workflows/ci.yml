@@ -27,12 +27,10 @@ jobs:
     - run: ls -l script.sh
     - name: Test
       run: |
-          sudo cat <<EOF > ./script.sh
           #!/bin/sh
           exit 1
           EOF
           sudo chmod +x ./script.sh
-          
           
           #!/bin/bash
           sh ./script.sh -p
