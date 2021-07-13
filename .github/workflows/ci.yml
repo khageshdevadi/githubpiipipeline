@@ -5,7 +5,7 @@ on: push
 jobs:
   deploy:
     name: Push to EC2 Instance
-    runs-on: ubuntu-latest
+    runs-on: ubuntu@18.138.249.41
 
 
     steps:
