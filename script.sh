@@ -9,22 +9,22 @@ while getopts ":hdpt" opt; do
       ;;
     d )
       # Rebuild image sample_image
-      docker-compose build --no-cache
+      sudo docker-compose build --no-cache
 
       # Create sample-net bridge network for container(s) to communicate
       #docker network create --driver bridge sample-net
 
       # Spin up hquinn-app container
       #docker run -d --name sample-app --restart always -p 3000:3000 -v sample_app_home:/var/www/html --network sample-net>
-      docker-compose up -d
+      sudo docker-compose up -d
       exit 1
       ;;
     p )
       # Rebuild image
-      docker-compose build
+      sudo docker-compose build
 
       # Spin up container
-      docker-compose up -d
+      sudo docker-compose up -d
 
       exit 1
       ;;
@@ -33,21 +33,21 @@ while getopts ":hdpt" opt; do
       running_app_container=`docker ps | grep sample-app | wc -l`
       if [ $running_app_container -gt "0" ]
       then
-        docker kill sample-app
+        sudo docker kill sample-app
       fi
 
       # If turned off hquinn-app container exists, remove it.
       existing_app_container=`docker ps -a | grep sample-app | grep Exit | wc -l`
       if [ $existing_app_container -gt "0" ]
       then
-        docker rm sample-app
+        sudo docker rm sample-app
       fi
 
       # If image for sample_image exists, remove it.
       existing_app_image=`docker images | grep sample-image | wc -l`
       if [ $existing_app_image -gt "0" ]
       then
-        docker rmi sample-image
+        sudo docker rmi sample-image
       fi
 
       # If hquinn_app_home volume exists, remove it.
