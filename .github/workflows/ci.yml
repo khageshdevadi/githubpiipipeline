@@ -21,9 +21,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-    - run: pwd
-    - run: ls
-    #- run: ls -l script.sh
-    - run: sudo chmod +x docker.sh
-    - run: ls -l docker.sh
-    - run: sh docker.sh
+        scripts: |
+          sudo docker stop sample-app
+          sudo docker rm sample-app
+          sudo docker rmi sample-image
+          sudo docker-compose up --build
