@@ -3,11 +3,8 @@ name: Push-to-EC2
 on: push
 
 jobs:
-  deploy:
-    name: CI
+  ci:
     runs-on: self-hosted
-
-
     steps:
     - name: Checkout the code
       uses: actions/checkout@v1
